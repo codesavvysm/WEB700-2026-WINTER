@@ -24,9 +24,11 @@ Write a JavaScript program that prints the following output:
 *****
 ```
 
-## Excercise 3: Define a function called asterisk that takes one argument and prints Vertical Line of Stars n times
+## Exercise 3: Create a Function to Print a Vertical Line of Asterisks
 
-For example calling asterik(5) will print the following output
+Define a function called asterisk that takes one argument n and prints a vertical line of asterisks n times.
+
+For example, calling asterisk(5) should produce the following output
 ```
 *
 *
