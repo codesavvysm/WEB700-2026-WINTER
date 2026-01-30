@@ -13,7 +13,7 @@ promise-based functions that "resolve" with the data.
 
 This assignment will consist of a few files, including: a main
 `assignment2.js` file and a `data` folder containing two files
-(`departments.json` & `employees.json`).
+([departments.json](data/departments.json) & [employees.json](data/employees.json)).
 
 ### **<u>Step 1:</u>** Create the Files & Directories
 
@@ -28,13 +28,13 @@ This assignment will consist of a few files, including: a main
 > &nbsp;&nbsp;&nbsp;&nbsp;`departments.json`  
 > &nbsp;&nbsp;&nbsp;&nbsp;`employees.json`
 
-### **<u>Step 2</u>:** Using the Data (employees.json & departments.json)
+### **<u>Step 2</u>:** Using the Data ([employees.json](data/employees.json) & [departments.json](data/departments.json))
 
 The data for this assignment is already provided for you in two separate
 files in the `data` folder:
 
-- `data/employees.json`
-- `data/departments.json`
+- [data/employees.json](data/employees.json)
+- [data/departments.json](data/departments.json)
 
 **Recall:**
 [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
@@ -84,7 +84,7 @@ syntax (you may choose whichever approach you prefer).
 
 **initialize()**
 
-- This function will read the contents of the `./data/employees.json`
+- This function will read the contents of the [./data/employees.json](data/employees.json)
   file.  
     
   **hint**: see "[Reading files with
@@ -103,9 +103,9 @@ fs.readFile('somefile.json', 'utf8', function(err,  dataFromSomeFile){
 });    
 ```
   
-- Only once the read operation for `./data/employees.json` has completed
+- Only once the read operation for [./data/employees.json](data/employees.json) has completed
   successfully (not before), repeat the process for the
-  `./data/departments.json` file.
+  [./data/departments.json](data/departments.json) file.
 
 - Once these two operations have finished successfully, create a new
   *instance* of the **Data** class (defined above) and assign it to the
