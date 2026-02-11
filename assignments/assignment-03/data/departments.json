@@ -1,0 +1,46 @@
+[
+  {
+    "departmentId": 1,
+    "departmentName": "Engineering"
+  },
+  {
+    "departmentId": 2,
+    "departmentName": "Marketing"
+  },
+  {
+    "departmentId": 3,
+    "departmentName": "Sales"
+  },
+  {
+    "departmentId": 4,
+    "departmentName": "Human Resources"
+  },
+  {
+    "departmentId": 5,
+    "departmentName": "Finance"
+  },
+  {
+    "departmentId": 6,
+    "departmentName": "Operations"
+  },
+  {
+    "departmentId": 7,
+    "departmentName": "IT"
+  },
+  {
+    "departmentId": 8,
+    "departmentName": "Customer Service"
+  },
+  {
+    "departmentId": 9,
+    "departmentName": "Research and Development"
+  },
+  {
+    "departmentId": 10,
+    "departmentName": "Quality Assurance"
+  },
+  {
+    "departmentId": 11,
+    "departmentName": "Legal"
+  }
+]
