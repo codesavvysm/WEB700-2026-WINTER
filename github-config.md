@@ -1,5 +1,25 @@
 # GitHub: Personal Access Token (classic) & Git Bash on Windows
 
+## 0. Set your Git name and email globally (required)
+
+Git needs your name and email for every commit. Set them **once per machine** so they are used for all repositories:
+
+```bash
+git config --global user.name "Your Full Name"
+git config --global user.email "your.email@example.com"
+```
+
+Use your real name and the **same email address** you use for your GitHub account (so your commits link to your profile).
+
+**Check that they are set:**
+
+```bash
+git config --global user.name
+git config --global user.email
+```
+
+---
+
 ## 1. Generate a Personal Access Token (classic) on GitHub
 
 1. Log in to [GitHub](https://github.com).
@@ -23,16 +43,4 @@ When you `git push`, `git pull`, or `git clone` over HTTPS, Git will ask for you
 
 Git Bash will prompt in the terminal. Enter the token when it asks for a password.
 
-**Optional – cache the token so you don’t type it every time:**
 
-```bash
-git config --global credential.helper store
-```
-
-The next time you enter your username and token, Git will save them (in plain text) and reuse them for future HTTPS operations. Only do this on a machine you control.
-
-**To stop caching credentials later:**
-
-```bash
-git config --global --unset credential.helper
-```

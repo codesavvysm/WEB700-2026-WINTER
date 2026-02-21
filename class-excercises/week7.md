@@ -69,7 +69,7 @@ Before you finish, confirm:
 ## Optional (if time permits)
 
 - Add a **table** with two columns (e.g. “Topic” and “Description”) and 2–3 rows about HTML and Express.
-- Validate your HTML at [https://validator.w3.org/](https://validator.w3.org/) or [https://html5.validator.nu/](https://html5.validator.nu/) and fix any reported errors.
+- Validate your HTML at [https://validator.w3.org/](https://validator.w3.org/) and fix any reported errors.
 
 ---
 
