@@ -12,7 +12,9 @@ Create a **new** Express server that serves **one static HTML page** matching th
 
 ## Reference
 
-Your page must look like the provided reference image (**assignment4.png**):
+Your HTML page must look like the reference image below. Use it as the visual guide for layout, content, and styling.
+
+**Reference image:** [assignment4.png](assignment4.png)
 
 - **Header** (dark blue): title “HTML & CSS Fundamentals”, subtitle “Learning HTML5 structure and CSS3 styling”, and a horizontal navigation bar.
 - **Main content** (white sections with light grey borders):
