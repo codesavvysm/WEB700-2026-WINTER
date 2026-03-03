@@ -88,6 +88,8 @@ Give each target section an **id** so the nav can jump to it, for example:
 
 ## Step 4: Navigation Behaviour
 
+Use the technique taught in this video to create hyperlinks that jump to a specific part of the same page: [How to link to a specific part of a web page](https://www.youtube.com/watch?v=e3phTzUvrsY). This is included here because it is not covered in the course material.
+
 - **About** – must navigate to the **About** section on the same page (use `href="#about"` or the id you chose).
 - **Topics** – must navigate to the **Topics** section on the same page (e.g. `href="#topics"`).
 - **Schedule** – must navigate to the **Schedule** (table) section on the same page (e.g. `href="#table-section"` or `href="#schedule"`).
