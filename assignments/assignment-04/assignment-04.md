@@ -14,14 +14,16 @@ Create a **new** Express server that serves **one static HTML page** matching th
 
 Your HTML page must look like the reference image below. Use it as the visual guide for layout, content, and styling.
 
-**Reference image:** [assignment4.png](assignment4.png)
+**Reference image:**
+
+![Reference layout – HTML & CSS Fundamentals page](assignment4.png)
 
 - **Header** (dark blue): title “HTML & CSS Fundamentals”, subtitle “Learning HTML5 structure and CSS3 styling”, and a horizontal navigation bar.
 - **Main content** (white sections with light grey borders):
   1. **About This Page** – text about semantic elements, special characters (`< > & ©`), and an image (e.g. Toronto sign).
   2. **Topics Covered** – ordered list with nested unordered list (e.g. HTML Basics → Elements, Attributes, Entities; CSS Selectors; Box Model), plus a highlighted “Inline vs Block” box with green styling.
   3. **Weekly Course Schedule** – table with caption “WEB Course Schedule”, columns Week / Topic / Lab / Hours, multiple data rows, and a “Total Hours” footer row (e.g. using `colspan`).
-  4. **Multimedia** – “Audio Example” with an HTML5 audio player, “Video Example” with an HTML5 video player.
+  4. **Multimedia** – “Audio Example” with an HTML5 audio player, “Video Example” with an HTML5 video player. Use the **audio and video examples from the course material** (HTML & CSS notes); the audio and video must be **playable** (with working play/pause and controls).
 - **Footer** (dark grey/black): e.g. “© 2026 HTML & CSS Demo”.
 
 Use the image as the visual guide for colours, spacing, borders, and structure.
@@ -73,6 +75,7 @@ Create **public/index.html** as a **single page** that includes:
   - Header with title and subtitle.
   - Nav with four links: **About**, **Topics**, **Schedule**, **External Link**.
   - Sections for “About This Page”, “Topics Covered” (with list and highlight box), “Weekly Course Schedule” (table with caption, thead, tbody, tfoot), and “Multimedia” (audio and video).
+  - **Multimedia:** Use the audio and video examples from the **course material** (HTML & CSS topic). The `<audio>` and `<video>` elements must include `controls` and point to actual playable media URLs so that users can play, pause, and use the players.
   - Footer with copyright-style text.
 
 Give each target section an **id** so the nav can jump to it, for example:
@@ -164,4 +167,5 @@ Submit your project (ZIP or repository link) with:
 - [ ] **About**, **Topics**, and **Schedule** links scroll to the correct section on the page.
 - [ ] **External Link** opens https://developer.mozilla.org in a new tab.
 - [ ] All styling in **main.css**; page looks like the reference (header, sections, table, footer, colours, borders).
+- [ ] **Multimedia:** Audio and video from course material; both are **playable** (controls work).
 - [ ] Deployed to **Vercel**; live URL included in submission.
