@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 700px; margin: 0 auto; padding-bottom: 200px; }
+    h1 { color: #333; }
+    .demo { margin: 2rem 0; padding: 1rem; background: #fafafa; border: 1px solid #ddd; border-radius: 8px; min-height: 140px; }
+    .demo h2 { margin-top: 0; font-size: 1.1rem; }
+    /* static: default, normal flow */
+    .static-box { position: static; padding: 10px; background: #e3f2fd; border: 2px solid #1976d2; }
+    /* relative: normal flow + offset; space still reserved */
+    .relative-box {
+      position: relative;
+      top: 10px;
+      left: 20px;
+      padding: 10px;
+      background: #e8f5e9;
+      border: 2px solid #388e3c;
+    }
+    /* absolute: removed from flow, positioned relative to nearest positioned ancestor */
+    .abs-parent { position: relative; height: 100px; background: #fff3e0; border: 2px solid #e65100; }
+    .absolute-box {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 8px;
+      background: #fce4ec;
+      border: 2px solid #c2185b;
+    }
+    /* fixed: relative to viewport; stays when scrolling */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      background: #673ab7;
+      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    /* sticky: acts like relative until scroll threshold, then sticks */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      padding: 12px;
+      background: #009688;
+      color: #fff;
+      margin: 0 -1rem 1rem -1rem;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Positioning</h1>
+
+  <div class="demo">
+    <h2>static (default)</h2>
+    <p>Normal flow. <code>top/left/right/bottom</code> have no effect.</p>
+    <div class="static-box">position: static</div>
+  </div>
+
+  <div class="demo">
+    <h2>relative</h2>
+    <p>In normal flow but offset by <code>top/left/right/bottom</code>. Original space is kept.</p>
+    <div class="relative-box">position: relative; top: 10px; left: 20px;</div>
+  </div>
+
+  <div class="demo">
+    <h2>absolute</h2>
+    <p>Removed from flow; positioned relative to the positioned ancestor (the orange box).</p>
+    <div class="abs-parent">
+      Parent (position: relative)
+      <div class="absolute-box">position: absolute; bottom: 10px; right: 10px;</div>
+    </div>
+  </div>
+
+  <div class="sticky-header">Sticky header &mdash; scroll down to see it stick to the top.</div>
+
+  <div class="demo">
+    <p>Some content so you can scroll and see sticky and fixed behavior. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  </div>
+
+  <div class="fixed-box">Fixed button (viewport)</div>
+</body>
+</html>

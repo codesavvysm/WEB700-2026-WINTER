@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index Stacking</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    h1 { color: #333; }
+    .stack-demo {
+      position: relative;
+      height: 180px;
+      margin: 2rem 0;
+    }
+    .layer {
+      position: absolute;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 2px solid rgba(0,0,0,0.3);
+    }
+    .layer-back {
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      height: 120px;
+      background: #ffccbc;
+      z-index: 0;
+    }
+    .layer-mid {
+      top: 50px;
+      left: 50px;
+      width: 200px;
+      height: 120px;
+      background: #c5cae9;
+      z-index: 1;
+    }
+    .layer-front {
+      top: 80px;
+      left: 80px;
+      width: 200px;
+      height: 120px;
+      background: #b2dfdb;
+      z-index: 2;
+    }
+    /* Modal overlay */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      z-index: 101;
+      max-width: 320px;
+    }
+    .modal-box h2 { margin-top: 0; }
+    .modal-box button {
+      margin-top: 1rem;
+      padding: 8px 16px;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>z-index</h1>
+  <p><code>z-index</code> controls stacking order when elements overlap. Higher values appear on top. Only affects positioned elements (<code>position</code> other than <code>static</code>). Default is <code>0</code>.</p>
+
+  <h2>Stacked layers</h2>
+  <div class="stack-demo">
+    <div class="layer layer-back">z-index: 0 (back)</div>
+    <div class="layer layer-mid">z-index: 1 (middle)</div>
+    <div class="layer layer-front">z-index: 2 (front)</div>
+  </div>
+
+  <h2>Modal (fixed overlay + dialog)</h2>
+  <p>Modals use high <code>z-index</code> so they appear above page content. Click to close.</p>
+  <div class="modal-backdrop" onclick="this.style.display='none'">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <h2>Modal dialog</h2>
+      <p>This box has a higher z-index than the dark backdrop.</p>
+      <button onclick="this.closest('.modal-backdrop').style.display='none'">Close</button>
+    </div>
+  </div>
+</body>
+</html>

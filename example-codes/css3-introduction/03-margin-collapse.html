@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin Collapse</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    h1 { color: #333; }
+    .intro { margin-bottom: 2rem; }
+    /* When two vertical margins meet, they collapse to the larger one */
+    .block1 {
+      margin-bottom: 25px;
+      padding: 1rem;
+      background: #ffecb3;
+      border: 1px solid #ffa000;
+    }
+    .block2 {
+      margin-top: 20px;
+      padding: 1rem;
+      background: #c5cae9;
+      border: 1px solid #3949ab;
+    }
+    .measure {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Margin Collapse</h1>
+  <p class="intro">When two block elements are stacked, their adjacent vertical margins <strong>collapse</strong>: the browser uses the <em>larger</em> of the two margins, not the sum.</p>
+
+  <div class="block1">Block 1: <code>margin-bottom: 25px;</code></div>
+  <div class="block2">Block 2: <code>margin-top: 20px;</code></div>
+  <p class="measure">The gap between them is 25px (the larger margin), not 45px.</p>
+</body>
+</html>

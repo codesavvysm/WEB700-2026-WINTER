@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display: Table Layout</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 700px; margin: 0 auto; }
+    h1 { color: #333; }
+    /* Table layout without using <table> markup */
+    .table-wrap {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .table-row { display: table-row; }
+    .table-cell {
+      display: table-cell;
+      padding: 10px 14px;
+      border: 1px solid #666;
+    }
+    .table-cell:first-child { font-weight: bold; background: #e0e0e0; width: 40%; }
+    .table-header .table-cell { background: #37474f; color: #fff; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>display: table</h1>
+  <p>You can make elements behave like a table using <code>display: table</code>, <code>display: table-row</code>, and <code>display: table-cell</code> &mdash; without using <code>&lt;table&gt;</code> in HTML. Useful for aligning content in columns.</p>
+
+  <div class="table-wrap">
+    <div class="table-row table-header">
+      <div class="table-cell">Name</div>
+      <div class="table-cell">Value</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">Width</div>
+      <div class="table-cell">100%</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">Height</div>
+      <div class="table-cell">auto</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">Layout</div>
+      <div class="table-cell">Table (CSS)</div>
+    </div>
+  </div>
+</body>
+</html>

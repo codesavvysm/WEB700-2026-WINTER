@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display: none</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    h1 { color: #333; }
+    .hidden { display: none; }
+    .visible-box {
+      padding: 1rem;
+      background: #e8f5e9;
+      border: 2px solid #4caf50;
+      margin: 1rem 0;
+    }
+    .error-msg {
+      padding: 1rem;
+      background: #ffebee;
+      border: 2px solid #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>display: none</h1>
+  <p>An element with <code>display: none;</code> is not painted at all. It and its children are removed from the visual layout (but still in the DOM).</p>
+
+  <div class="visible-box">
+    <strong>This box is visible.</strong>
+  </div>
+
+  <div class="hidden error-msg">
+    <h2>Error!</h2>
+    <p>This error message has <code>display: none</code> &mdash; you don&rsquo;t see it.</p>
+  </div>
+
+  <div class="visible-box">
+    <strong>This box is visible again.</strong> The hidden div takes no space.
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS overflow</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 700px; margin: 0 auto; }
+    h1 { color: #333; }
+    .box {
+      width: 220px;
+      height: 100px;
+      margin: 1rem 0;
+      padding: 10px;
+      border: 2px solid #333;
+      background: #f5f5f5;
+    }
+    .box h3 { margin: 0 0 8px 0; font-size: 1rem; }
+    .overflow-visible { overflow: visible; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-scroll { overflow: scroll; }
+    .overflow-auto { overflow: auto; }
+    .tall { height: 100px; }
+    .tall-content { width: 300px; }
+  </style>
+</head>
+<body>
+  <h1>overflow Property</h1>
+  <p>When content is larger than its container, <code>overflow</code> controls what happens: clipping and/or scrollbars.</p>
+
+  <h2>overflow: visible (default)</h2>
+  <div class="box overflow-visible tall">
+    <h3>visible</h3>
+    <p class="tall-content">Content can spill outside the box. No scrollbars, nothing clipped.</p>
+  </div>
+
+  <h2>overflow: hidden</h2>
+  <div class="box overflow-hidden tall">
+    <h3>hidden</h3>
+    <p class="tall-content">Content is clipped. No scrollbars. Extra content is not visible.</p>
+  </div>
+
+  <h2>overflow: scroll</h2>
+  <div class="box overflow-scroll tall">
+    <h3>scroll</h3>
+    <p class="tall-content">Scrollbars are always shown (horizontal and vertical), content is clipped and scrollable.</p>
+  </div>
+
+  <h2>overflow: auto</h2>
+  <div class="box overflow-auto tall">
+    <h3>auto</h3>
+    <p class="tall-content">Scrollbars appear only when needed. Content is clipped and scrollable when necessary.</p>
+  </div>
+</body>
+</html>

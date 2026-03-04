@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Properties &amp; Shorthand</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 700px; margin: 0 auto; }
+    h1 { color: #333; }
+    .card {
+      border: 2px solid #1565c0;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #e3f2fd;
+    }
+    .card h3 { margin-top: 0; }
+    code { background: #fff; padding: 2px 6px; border-radius: 4px; }
+    /* Clockwise order: top, right, bottom, left */
+    .ex1 { margin: 5px 10px 15px 20px; }   /* all four different */
+    .ex2 { margin: 10px 5px; }              /* top/bottom 10px, left/right 5px */
+    .ex3 { margin: 12px; }                  /* all four 12px */
+    .ex4 {
+      margin: 10px 20px;
+      padding: 8px 16px;
+      border-width: 1px 2px 3px 4px;
+      border-style: solid;
+      border-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Box Properties &amp; Shorthand</h1>
+  <p>Margin, padding, and border can use shorthand. Order is <strong>clockwise</strong>: top &rarr; right &rarr; bottom &rarr; left (like a clock).</p>
+
+  <div class="card ex1">
+    <h3>Example 1: Four values</h3>
+    <code>margin: 5px 10px 15px 20px;</code> &rarr; top, right, bottom, left
+  </div>
+
+  <div class="card ex2">
+    <h3>Example 2: Two values</h3>
+    <code>margin: 10px 5px;</code> &rarr; top/bottom 10px, left/right 5px
+  </div>
+
+  <div class="card ex3">
+    <h3>Example 3: One value</h3>
+    <code>margin: 12px;</code> &rarr; all four sides 12px
+  </div>
+
+  <div class="card ex4">
+    <h3>Example 4: Padding &amp; border shorthand</h3>
+    <code>padding: 8px 16px;</code> and <code>border-width: 1px 2px 3px 4px;</code> (same clockwise order).
+  </div>
+</body>
+</html>

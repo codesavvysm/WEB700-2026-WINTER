@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display: inline vs block</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 600px; margin: 0 auto; }
+    h1 { color: #333; }
+    section { margin: 2rem 0; }
+    .block-demo h2 {
+      display: block;
+      margin: 8px 0;
+      padding: 8px;
+      background: #bbdefb;
+      border: 1px solid #1976d2;
+    }
+    .inline-demo h2 {
+      display: inline;
+      margin: 8px;
+      padding: 8px;
+      background: #c8e6c9;
+      border: 1px solid #388e3c;
+    }
+    .inline-demo p { margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>display: inline vs block</h1>
+
+  <section class="block-demo">
+    <h2>Block (default for h1–h6, div, p)</h2>
+    <p>Blocks stack <strong>vertically</strong>. Each block starts on a new line and takes full width (unless constrained).</p>
+    <h2>One</h2>
+    <h2>Two</h2>
+    <h2>Three</h2>
+  </section>
+
+  <section class="inline-demo">
+    <h2>Inline (try it)</h2>
+    <p>Inline elements flow <strong>horizontally</strong> with text. They don&rsquo;t force a new line.</p>
+    <h2>One</h2><h2>Two</h2><h2>Three</h2>
+  </section>
+</body>
+</html>
