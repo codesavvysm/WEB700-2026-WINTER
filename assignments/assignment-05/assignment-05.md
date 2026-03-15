@@ -84,7 +84,7 @@ In **views/add.ejs**, implement a **single form** with **exactly** these fields 
 |----------------|--------|
 | **Student ID** | Required. Use `name` e.g. `studentId`. |
 | **Student Name** | Required. Use `name` e.g. `studentName`. |
-| **Program**    | At least three program options (e.g. CPA, BSD, DAD) plus an optional “Please choose” placeholder. Use `name` e.g. `program`. |
+| **Program**    | **Dropdown.** At least three program options (e.g. BTT, CAA, CPP) plus an optional “Please choose” placeholder. Use `name` e.g. `program`. |
 | **GPA**        | Use `name` e.g. `gpa`. You may set `min`, `max`, or `step` as needed. |
 | **Graduated?** | **Checkbox.** Yes/no: checked = yes (graduated), unchecked = no (not graduated). Use `name` e.g. `graduated`. Associate with a label (e.g. “Graduated?” or “Yes”). |
 | **Submit**     | Submits the form. |
@@ -99,7 +99,7 @@ In **views/add.ejs**, implement a **single form** with **exactly** these fields 
 Create a **POST** route that matches the form’s `action` (e.g. **POST /add**).
 
 - Read the submitted data from `req.body` (e.g. `studentId`, `studentName`, `program`, `gpa`, `graduated`).
-- **Graduated? checkbox:** Normalize to a boolean. Checkboxes submit `"on"` when checked and are `undefined` when unchecked
+- **Graduated? checkbox:** Normalize to a boolean. Checkboxes submit `"on"` when checked and are `undefined` when unchecked.
 - Push the resulting object onto your in-memory `students` array.
 - Respond with a **redirect** to the View Students page: `res.redirect('/entries');`
 
