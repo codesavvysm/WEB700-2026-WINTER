@@ -1,1 +1,4 @@
 .DS_Store
+playground
+.vscode
+node_modules
